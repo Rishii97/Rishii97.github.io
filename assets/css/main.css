@@ -721,60 +721,65 @@ section,
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
-.resume .resume-title {
-  color: var(--heading-color);
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h3.resume-title {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
+.resume-item {
+  margin-bottom: 20px;
 }
 
-.resume .resume-item h4 {
-  line-height: 18px;
+.resume-item .toggle {
+  cursor: pointer;
   font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 10px;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.resume .resume-item h5 {
-  font-size: 16px;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
+.resume-item .toggle:hover {
+  color: #007bff;
 }
 
-.resume .resume-item ul {
-  padding-left: 20px;
+.resume-item .content {
+  display: none; /* Hidden by default */
+  padding: 10px 0;
 }
 
-.resume .resume-item ul li {
-  padding-bottom: 10px;
+.resume-item ul {
+  list-style-type: disc;
+  margin-left: 20px;
 }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
+.hover-highlight {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  transition: background-color 0.3s;
 }
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
+.hover-highlight:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .col-lg-6 {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
