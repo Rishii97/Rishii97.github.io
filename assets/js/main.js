@@ -45,13 +45,7 @@
     });
   });
 
-  // The additional script for toggling resume content
-document.querySelectorAll('.toggle').forEach(function(toggle) {
-  toggle.addEventListener('click', function() {
-    var content = this.nextElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-  });
-});
+  
 
   /**
    * Preloader
